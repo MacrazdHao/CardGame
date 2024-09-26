@@ -4,6 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public class CardCases
+{
+  public static Dictionary<string, Card> CardCaseDictionary;
+  // 创建一个新的卡牌对象
+  public static Card GetANewCardCase(CardTypeMap.CardKeyEnum cardKey)
+  {
+    if (CardCaseDictionary == null) CardCaseDictionary = new Dictionary<string, Card>();
+    Card newCard = (Card)ResourceLoader.CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)].Clone();
+    CardCaseDictionary.Add(newCard.id, newCard);
+    return newCard;
+  }
+}
+
 public class Card : ICloneable
 {
   public string id;

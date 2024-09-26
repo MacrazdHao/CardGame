@@ -11,14 +11,11 @@ public class JsonLoader : MonoBehaviour
     {
         string jsonText;
         string fullPath = Application.dataPath + Path;
-        Debug.Log("JSON文件路径: " + fullPath);
         using (StreamReader reader = File.OpenText(fullPath))
         {
             jsonText = reader.ReadToEnd();
             reader.Close();
         }
-        Debug.Log("读取的JSON内容:");
-        Debug.Log(jsonText);
         T result = JsonConvert.DeserializeObject<T>(jsonText);
         return result;
     }

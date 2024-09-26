@@ -22,7 +22,7 @@ public class GlobalController : MonoBehaviour
     public SceneMode TargetScene;
     public Action<float> LoadingProgressUpdate; // 从加载场景中传回的回调函数
     public Action OnLoadingComplete; // Scene加载完成后的回调函数
-    private float ResourceProgressRate = 0.1f;
+    private float ResourceProgressRate = 0.2f;
     void Start()
     {
         globalController = this;
@@ -54,15 +54,41 @@ public class GlobalController : MonoBehaviour
     // 使用 yield break 退出函数
     IEnumerator LoadSceneAsyncIE(SceneMode sceneMode, Action action = null)
     {
-        float progressBuffer;
-        float progress;
+        float progressBuffer = 0;
+        float progress = 0;
+        // 开始加载本地资源
+        StartCoroutine(ResourceLoader.LoadResources());
+        while (ResourceLoader.ResourcesLoadingProgress < 1)
+        {
+            progress = ResourceProgressRate * ResourceLoader.ResourcesLoadingProgress;
+            while (progress - progressBuffer >= 0.01f)
+            {
+                progressBuffer += 0.01f;
+                if (LoadingProgressUpdate != null)
+                {
+                    LoadingProgressUpdate(progressBuffer);
+                }
+                yield return new WaitForSeconds(0.01f); // 等加载页面的数字/进度条变更后，即下一帧再继续执行
+            }
+        }
+        progress = ResourceProgressRate;
+        // 当ResourceLoader.ResourcesLoadingProgress瞬间达到1时，会跳过内部的缓进循环，此处为补充循环
+        while (progress - progressBuffer >= 0.01f)
+        {
+            progressBuffer += 0.01f;
+            if (LoadingProgressUpdate != null)
+            {
+                LoadingProgressUpdate(progressBuffer);
+            }
+            yield return new WaitForSeconds(0.01f); // 等加载页面的数字/进度条变更后，即下一帧再继续执行
+        }
+        progressBuffer = ResourceProgressRate;
+        LoadingProgressUpdate(progressBuffer);
+
+        // 开始加载目标场景
         if (!SceneDictionary.ContainsKey(sceneMode) || SceneDictionary[sceneMode] == null) yield break; // 字典中不存在的场景
         AsyncOperation loadingAO = SceneManager.LoadSceneAsync(SceneDictionary[sceneMode]); // 进度只有0.9f？还是因为设置了allowSceneActivation？
         loadingAO.allowSceneActivation = false; // 加载完成立即跳转场景
-
-        progress = ResourceProgressRate; // 假设资源已经Loading完成
-        progressBuffer = ResourceProgressRate; // 假设资源已经Loading完成
-
         while (loadingAO.progress < 0.9f)
         {
             progress = (1 - ResourceProgressRate) * loadingAO.progress / 0.9f + ResourceProgressRate;
@@ -76,6 +102,19 @@ public class GlobalController : MonoBehaviour
                 yield return new WaitForSeconds(0.01f); // 等加载页面的数字/进度条变更后，即下一帧再继续执行
             }
         }
+        progress = 1;
+        // 当loadingAO.progress瞬间达到0.9时，会跳过内部的缓进循环，此处为补充循环
+        while (progress - progressBuffer >= 0.01f)
+        {
+            progressBuffer += 0.01f;
+            if (LoadingProgressUpdate != null)
+            {
+                LoadingProgressUpdate(progressBuffer);
+            }
+            yield return new WaitForSeconds(0.01f); // 等加载页面的数字/进度条变更后，即下一帧再继续执行
+        }
+        progressBuffer = 1;
+        LoadingProgressUpdate(progressBuffer);
         loadingAO.allowSceneActivation = true;
         if (action != null)
         {

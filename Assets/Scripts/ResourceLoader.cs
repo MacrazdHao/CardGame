@@ -11,6 +11,7 @@ public class ResourceLoader : MonoBehaviour
     public static Dictionary<ResourceType, string> PathDictionary;
     public static Dictionary<string, Sprite> SpriteDictionary;
     public static Dictionary<string, Card> CardDictionary;
+    public static float ResourcesLoadingProgress = 0;
 
     public static string ResourceTypeToKey(ResourceType resourceType)
     {
@@ -42,14 +43,19 @@ public class ResourceLoader : MonoBehaviour
             default: return "资源路径";
         }
     }
-    public static void LoadResources()
+    public static IEnumerator LoadResources()
     {
         LoadPathMap();
+        ResourcesLoadingProgress = 1 / 3;
         LoadSprites();
+        ResourcesLoadingProgress = 2 / 3;
         LoadCardData();
+        ResourcesLoadingProgress = 1;
+        yield return null;
     }
     public static void LoadPathMap()
     {
+        if (PathDictionary != null) return;
         CurrentLoadingResourceType = ResourceType.MapPath;
         PathDictionary = new Dictionary<ResourceType, string>();
         JObject PathMap = JsonLoader.LoadJsonFile<JObject>("/Resources/Map/PathMap.json");
@@ -60,6 +66,7 @@ public class ResourceLoader : MonoBehaviour
     }
     public static void LoadSprites()
     {
+        if (SpriteDictionary != null) return;
         CurrentLoadingResourceType = ResourceType.Sprites;
         SpriteDictionary = new Dictionary<string, Sprite>();
         JObject SpritesPath = JsonLoader.LoadJsonFile<JObject>(PathDictionary[ResourceType.Sprites]);
@@ -71,6 +78,7 @@ public class ResourceLoader : MonoBehaviour
     }
     public static void LoadCardData()
     {
+        if (CardDictionary != null) return;
         CurrentLoadingResourceType = ResourceType.CardsData;
         CardDictionary = new Dictionary<string, Card>();
         JObject cardsData = JsonLoader.LoadJsonFile<JObject>(PathDictionary[ResourceType.CardsData]);
@@ -84,11 +92,6 @@ public class ResourceLoader : MonoBehaviour
     public static Card GetCardInfo(CardTypeMap.CardKeyEnum cardKey)
     {
         return CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)];
-    }
-    // 创建一个新的卡牌对象
-    public static Card GetANewCardCase(CardTypeMap.CardKeyEnum cardKey)
-    {
-        return (Card)CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)].Clone();
     }
     public static Sprite GetCardTypeSprite(CardTypeMap.CardTypeEnum cardType)
     {
