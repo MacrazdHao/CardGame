@@ -15,7 +15,7 @@ public class CardCoverController : MonoBehaviour
     {
         CardCoverImage = transform.GetComponentInChildren<Image>();
         CardCoverImageRect = CardCoverImage.GetComponent<RectTransform>();
-        // if (CardId != null) initCardCover();
+        if (CardId != null) initCardCover();
     }
 
     // Update is called once per frame
@@ -29,7 +29,11 @@ public class CardCoverController : MonoBehaviour
     }
     public void initCardCover()
     {
-        Debug.Log(CardInfo.cardKey);
+        if (CardInfo == null)
+        {
+            CardCoverImage.sprite = ResourceLoader.GetCardCover(CardTypeMap.CardKeyEnum.Card_Default);
+            return;
+        }
         CardCoverImage.sprite = ResourceLoader.GetCardCover(CardInfo.cardKey);
         CardCoverImageRect.anchoredPosition = new Vector2(CardInfo.cardCoverRect.posX, CardInfo.cardCoverRect.posY);
         CardCoverImageRect.sizeDelta = new Vector2(CardInfo.cardCoverRect.width, CardInfo.cardCoverRect.height);

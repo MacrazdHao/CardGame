@@ -96,7 +96,6 @@ public class ResourceLoader : MonoBehaviour
     }
     public static Sprite GetCardCover(CardTypeMap.CardKeyEnum cardKey)
     {
-        Debug.Log("取出封面:"+cardKey);
         string cardCoverKey = CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)].cardCover;
         return SpriteDictionary[cardCoverKey];
     }
