@@ -1,5 +1,6 @@
 {
   "Card_Default": {
+    "cardMapKey": "Card_Default",
     "cardType": 0,
     "cardName": "未知",
     "cardPhysic": 0,
@@ -9,9 +10,17 @@
     "cardDescribe": "神秘的卡牌，谁也不知道是什么...",
     "cardAttack": 0,
     "cardDefence": 0,
-    "cardRare": 0
+    "cardRare": 0,
+    "cardCoverRect": {
+      "posX": 0,
+      "posY": 0,
+      "width": 224,
+      "height": 180,
+      "ImageType": 3
+    }
   },
   "Card_MonkeysYell": {
+    "cardMapKey": "Card_MonkeysYell",
     "cardType": 2,
     "cardName": "马喽的咆哮",
     "cardPhysic": 3,
@@ -25,6 +34,13 @@
     "cardDescribe": "马喽的无能狂怒，虽然造成不了什么伤害，但多少有点烦人...",
     "cardAttack": 99,
     "cardDefence": 999,
-    "cardRare": 2
+    "cardRare": 2,
+    "cardCoverRect": {
+      "posX": 32,
+      "posY": -5,
+      "width": 300,
+      "height": 250,
+      "ImageType": 3
+    }
   }
 }

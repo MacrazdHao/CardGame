@@ -67,11 +67,14 @@
     <Compile Include="Assets\Scripts\GlobalController.cs" />
     <Compile Include="Assets\Scripts\Card\EnumMaps\CardTypeMap.cs" />
     <Compile Include="Assets\Scripts\LoadingScene.cs" />
+    <Compile Include="Assets\Scripts\Card\CardHeaderController.cs" />
     <Compile Include="Assets\Scripts\ResourceLoader.cs" />
+    <Compile Include="Assets\Scripts\utils\RandomID.cs" />
     <Compile Include="Assets\Scripts\utils\JsonLoader.cs" />
     <Compile Include="Assets\Scripts\Card\CardController.cs" />
     <Compile Include="Assets\Scripts\utils\ImageLoader.cs" />
     <Compile Include="Assets\Scripts\Card\Card.cs" />
+    <Compile Include="Assets\Scripts\Card\CardCoverController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

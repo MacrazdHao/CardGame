@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Card
+public class Card : ICloneable
 {
-  public int id;
+  public string id;
   public CardTypeMap.CardTypeEnum cardType;
   public string cardName;
   public int cardPhysic;
@@ -15,6 +17,25 @@ public class Card
   public int cardAttack;
   public int cardDefence;
   public int cardRare;
+  public string cardMapKey;
+  public CardTypeMap.CardKeyEnum cardKey;
+  public CardCoverRect cardCoverRect;
+  public object Clone()
+  {
+    Card cloneCard = (Card)MemberwiseClone();
+    cloneCard.cardKey = CardTypeMap.MapKeyToCardKey(cloneCard.cardMapKey);
+    cloneCard.id = RandomID.GetRandomId(); // 后期改为随机生成的ID
+    return cloneCard;
+  }
+}
+
+public class CardCoverRect
+{
+  public int posX;
+  public int posY;
+  public int width;
+  public int height;
+  public Image.Type imageType; // 0-Simple  1-Sliced  2-Tiled  3-Filled
 }
 
 public class CardSlots

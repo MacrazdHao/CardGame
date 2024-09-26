@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ResourceLoader : MonoBehaviour
@@ -78,5 +79,25 @@ public class ResourceLoader : MonoBehaviour
             Card card = prop.Value.ToObject<Card>();
             CardDictionary.Add(prop.Name, card);
         }
+    }
+    // 获取卡牌基本信息(仅供参考，不能作为实例使用)
+    public static Card GetCardInfo(CardTypeMap.CardKeyEnum cardKey)
+    {
+        return CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)];
+    }
+    // 创建一个新的卡牌对象
+    public static Card GetANewCardCase(CardTypeMap.CardKeyEnum cardKey)
+    {
+        return (Card)CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)].Clone();
+    }
+    public static Sprite GetCardTypeSprite(CardTypeMap.CardTypeEnum cardType)
+    {
+        return SpriteDictionary[CardTypeMap.CardTypeEnumToMapKey(cardType)];
+    }
+    public static Sprite GetCardCover(CardTypeMap.CardKeyEnum cardKey)
+    {
+        Debug.Log("取出封面:"+cardKey);
+        string cardCoverKey = CardDictionary[CardTypeMap.CardKeyToMapKey(cardKey)].cardCover;
+        return SpriteDictionary[cardCoverKey];
     }
 }
