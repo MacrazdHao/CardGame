@@ -10,6 +10,8 @@ public class LoadingScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ResourceLoader.LoadResources();
+
         GlobalController.globalController.LoadingProgressUpdate = UpdateLoadingTips;
         if (GlobalController.globalController.OnLoadingComplete != null) {
             GlobalController.globalController.OnLoadingComplete();

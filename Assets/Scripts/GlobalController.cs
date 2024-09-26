@@ -66,10 +66,8 @@ public class GlobalController : MonoBehaviour
         while (loadingAO.progress < 0.9f)
         {
             progress = (1 - ResourceProgressRate) * loadingAO.progress / 0.9f + ResourceProgressRate;
-            Debug.Log(progress);
             while (progress - progressBuffer >= 0.01f)
             {
-                Debug.Log(progressBuffer);
                 progressBuffer += 0.01f;
                 if (LoadingProgressUpdate != null)
                 {
