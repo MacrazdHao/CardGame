@@ -1,0 +1,10 @@
+{
+  "Attack": 1,
+  "Defence": 2,
+  "CardType1": 1,
+  "CardType2": 2,
+  "CardType3": 3,
+  "CardType4": 4,
+  "CardType5": 5,
+  "CardType6": 6
+}

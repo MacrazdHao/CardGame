@@ -1,0 +1,13 @@
+{
+  "Attack": "Icons/UI Elements/White/1x/exit right",
+  "Defence": "Icons/UI Elements/White/1x/hamburger icon",
+  "cardType0": "Icons/UI Elements/White/1x/BUtton 1",
+  "cardType1": "Icons/UI Elements/White/1x/BUtton 2",
+  "cardType2": "Icons/UI Elements/White/1x/BUtton 3",
+  "cardType3": "Icons/UI Elements/White/1x/BUtton A",
+  "cardType4": "Icons/UI Elements/White/1x/BUtton B",
+  "cardType5": "Icons/UI Elements/White/1x/BUtton C",
+  "Default": "Icons/UI Elements/White/1x/sign2",
+  "CardCover_Default": "CardCovers/Default",
+  "CardCover_MonkeysYell": "CardCovers/MonkeysYell"
+}

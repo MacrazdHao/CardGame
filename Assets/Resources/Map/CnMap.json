@@ -1,0 +1,18 @@
+{
+  "cardType": "卡牌类型",
+  "cardName": "卡牌名称",
+  "cardPhysic": "卡牌消耗体力",
+  "cardMagic": "卡牌消耗魔力",
+  "cardSlot": "卡牌插槽",
+  "cardCover": "卡牌封面",
+  "cardDescribe": "卡牌描述",
+  "cardAttack": "卡牌攻击力",
+  "cardDefence": "卡牌防御值",
+  "cardRare": "卡牌稀有度",
+  "cardRare_0": "B",
+  "cardRare_1": "A",
+  "cardRare_2": "S",
+  "cardRare_3": "SS",
+  "cardRare_4": "SSR",
+  "cardRare_5": "UR"
+}
