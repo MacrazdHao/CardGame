@@ -53,13 +53,13 @@ public class CardCoverRect
 
 public class CardSlots
 {
-  public int cardType0;
-  public int cardType1;
-  public int cardType2;
-  public int cardType3;
-  public int cardType4;
-  public int cardType5;
-  private Dictionary<CardTypeMap.CardTypeEnum, int> CardSlotsDictionary = null;
+  public int cardType0 = 0;
+  public int cardType1 = 0;
+  public int cardType2 = 0;
+  public int cardType3 = 0;
+  public int cardType4 = 0;
+  public int cardType5 = 0;
+  public Dictionary<CardTypeMap.CardTypeEnum, int> CardSlotsDictionary = null;
   public Dictionary<CardTypeMap.CardTypeEnum, int> getExistCardSlot()
   {
     if (CardSlotsDictionary == null)
@@ -91,5 +91,15 @@ public class CardSlots
       }
     }
     return CardSlotsDictionary;
+  }
+  public CardSlots(int cardType0, int cardType1, int cardType2, int cardType3, int cardType4, int cardType5)
+  {
+    this.cardType0 = cardType0;
+    this.cardType1 = cardType1;
+    this.cardType2 = cardType2;
+    this.cardType3 = cardType3;
+    this.cardType4 = cardType4;
+    this.cardType5 = cardType5;
+    CardSlotsDictionary = getExistCardSlot();
   }
 }

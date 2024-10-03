@@ -15,7 +15,11 @@ public class CardCoverController : MonoBehaviour
     {
         CardCoverImage = transform.GetComponentInChildren<Image>();
         CardCoverImageRect = CardCoverImage.GetComponent<RectTransform>();
-        if (CardId != null) initCardCover();
+        if (CardId != null)
+        {
+            CardIdBuffer = CardId;
+            initCardCover();
+        }
     }
 
     // Update is called once per frame

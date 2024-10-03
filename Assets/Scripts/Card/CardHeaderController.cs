@@ -15,7 +15,11 @@ public class CardHeaderController : MonoBehaviour
     {
         CardTypeImage = transform.GetComponentInChildren<Image>();
         CardNameText = transform.GetComponentInChildren<Text>();
-        if (CardId != null) initCardHeaderInfo();
+        if (CardId != null)
+        {
+            CardIdBuffer = CardId;
+            initCardHeaderInfo();
+        }
     }
 
     void Update()

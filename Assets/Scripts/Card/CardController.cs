@@ -9,6 +9,7 @@ public class CardController : MonoBehaviour
     public Card CardInfo;
     public CardHeaderController cardHeaderController;
     public CardCoverController cardCoverController;
+    public CardSlotsController cardSlotsController;
 
     void Start()
     {
@@ -32,5 +33,9 @@ public class CardController : MonoBehaviour
         cardCoverController = GetComponentInChildren<CardCoverController>();
         cardCoverController.CardInfo = CardInfo;
         cardCoverController.CardId = CardInfo.id;
+
+        cardSlotsController = GetComponentInChildren<CardSlotsController>();
+        cardSlotsController.CardInfo = CardInfo;
+        cardSlotsController.CardId = CardInfo.id;
     }
 }
