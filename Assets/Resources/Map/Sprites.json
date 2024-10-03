@@ -1,6 +1,8 @@
 {
   "Attack": "Icons/UI Elements/White/1x/exit right",
   "Defence": "Icons/UI Elements/White/1x/hamburger icon",
+  "Physic": "Icons/UI Elements/White/1x/settings",
+  "Magic": "Icons/UI Elements/White/1x/share",
   "cardType0": "Icons/UI Elements/White/1x/BUtton 1",
   "cardType1": "Icons/UI Elements/White/1x/BUtton 2",
   "cardType2": "Icons/UI Elements/White/1x/BUtton 3",

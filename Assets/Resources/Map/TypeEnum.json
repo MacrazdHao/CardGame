@@ -1,6 +1,8 @@
 {
-  "Attack": 1,
-  "Defence": 2,
+  "Magic": 0,
+  "Physic": 1,
+  "Attack": 2,
+  "Defence": 3,
   "CardType1": 1,
   "CardType2": 2,
   "CardType3": 3,

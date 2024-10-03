@@ -9,7 +9,6 @@ public class CardDescriptionController : MonoBehaviour
     public string CardIdBuffer;
     public Card CardInfo;
     private Text DescriptionText;
-    private RectTransform CardCoverImageRect;
     // Start is called before the first frame update
     void Start()
     {

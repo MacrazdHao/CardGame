@@ -7,7 +7,7 @@ using UnityEngine;
 public class CardTypeMap
 {
   public enum CardKeyEnum { Card_Default, Card_MonkeysYell }
-  public enum AttributeEnum { Attack, Defence, Default }
+  public enum AttributeEnum { Magic, Physic, Attack, Defence, Default }
   public enum CardTypeEnum { CardType0, CardType1, CardType2, CardType3, CardType4, CardType5, Default }
   public enum CardRareEnum { B, A, S, SS, SSR, UR }
 
@@ -35,6 +35,8 @@ public class CardTypeMap
     {
       case AttributeEnum.Attack: return "Attack";
       case AttributeEnum.Defence: return "Defence";
+      case AttributeEnum.Physic: return "Physic";
+      case AttributeEnum.Magic: return "Magic";
       default: return "Default";
     }
   }
