@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CardTypeMap
 {
-  public enum CardKeyEnum { Card_Default, Card_MonkeysYell }
+  public enum CardKeyEnum { Card_Default, Card_MonkeysYell, Card_SleepMonkey, Card_MoneyMonkey }
   public enum AttributeEnum { Magic, Physic, Attack, Defence, Default }
   public enum CardTypeEnum { CardType0, CardType1, CardType2, CardType3, CardType4, CardType5, Default }
   public enum CardRareEnum { B, A, S, SS, SSR, UR }
@@ -17,6 +17,8 @@ public class CardTypeMap
     {
       case CardKeyEnum.Card_Default: return "Card_Default";
       case CardKeyEnum.Card_MonkeysYell: return "Card_MonkeysYell";
+      case CardKeyEnum.Card_MoneyMonkey: return "Card_MoneyMonkey";
+      case CardKeyEnum.Card_SleepMonkey: return "Card_SleepMonkey";
       default: return "Card_Default";
     }
   }
@@ -26,6 +28,8 @@ public class CardTypeMap
     {
       case "Card_Default": return CardKeyEnum.Card_Default;
       case "Card_MonkeysYell": return CardKeyEnum.Card_MonkeysYell;
+      case "Card_MoneyMonkey": return CardKeyEnum.Card_MoneyMonkey;
+      case "Card_SleepMonkey": return CardKeyEnum.Card_SleepMonkey;
       default: return CardKeyEnum.Card_Default;
     }
   }

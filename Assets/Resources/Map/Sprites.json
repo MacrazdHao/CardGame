@@ -11,5 +11,7 @@
   "cardType5": "Icons/UI Elements/White/1x/BUtton C",
   "Default": "Icons/UI Elements/White/1x/sign2",
   "CardCover_Default": "CardCovers/Default",
-  "CardCover_MonkeysYell": "CardCovers/MonkeysYell"
+  "CardCover_MonkeysYell": "CardCovers/MonkeysYell",
+  "CardCover_SleepMonkey": "CardCovers/SleepMonkey",
+  "CardCover_MoneyMonkey": "CardCovers/MoneyMonkey"
 }
