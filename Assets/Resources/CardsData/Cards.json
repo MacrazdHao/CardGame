@@ -7,7 +7,7 @@
     "cardMagic": 0,
     "cardSlot": {},
     "cardCover": "CardCover_Default",
-    "cardDescribe": "神秘的卡牌，谁也不知道是什么...",
+    "cardDescription": "神秘的卡牌，谁也不知道是什么...",
     "cardAttack": 0,
     "cardDefence": 0,
     "cardRare": 0,
@@ -31,7 +31,7 @@
       "cardType5": 7
     },
     "cardCover": "CardCover_MonkeysYell",
-    "cardDescribe": "马喽的无能狂怒，虽然造成不了什么伤害，但多少有点烦人...",
+    "cardDescription": "马喽的无能狂怒，虽然造成不了什么伤害，但多少有点烦人...",
     "cardAttack": 99,
     "cardDefence": 999,
     "cardRare": 2,

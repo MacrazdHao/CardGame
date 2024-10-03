@@ -48,7 +48,6 @@ public class CardSlotItemController : MonoBehaviour
         {
             float textWidth = textController.textPreferredWidth;
             float iconWidth = SlotTypeImageRectTransform.sizeDelta.x;
-            Debug.Log("字符长度参数: " + Spacing + " " + textWidth + " " + iconWidth);
             SlotItemTextRectTransform.anchoredPosition = new Vector2(Spacing + textWidth / 2 + iconWidth, SlotItemTextRectTransform.anchoredPosition.y);
             SlotItemWidth = textWidth + iconWidth + Spacing;
             SlotItemRectTransform.sizeDelta = new Vector2(SlotItemWidth, SlotItemRectTransform.sizeDelta.y);

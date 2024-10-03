@@ -56,7 +56,6 @@ public class CardSlotsController : MonoBehaviour
             slotItemController.UpdateToggle = true;
             while (slotItemUpdating)
             {
-                Debug.Log("waiting: " + kvp.Key);
                 yield return null;
             }
             slotItemIndex++;

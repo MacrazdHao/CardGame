@@ -26,7 +26,7 @@ public class Card : ICloneable
   public int cardMagic;
   public CardSlots cardSlot;
   public string cardCover;
-  public string cardDescribe;
+  public string cardDescription;
   public int cardAttack;
   public int cardDefence;
   public int cardRare;

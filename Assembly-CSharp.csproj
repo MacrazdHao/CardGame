@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Card\CardSlotsController.cs" />
     <Compile Include="Assets\Scripts\Card\EnumMaps\CardTypeMap.cs" />
     <Compile Include="Assets\Scripts\LoadingScene.cs" />
+    <Compile Include="Assets\Scripts\Card\CardDescriptionController.cs" />
     <Compile Include="Assets\Scripts\Card\CardHeaderController.cs" />
     <Compile Include="Assets\Scripts\ResourceLoader.cs" />
     <Compile Include="Assets\Scripts\utils\RandomID.cs" />
