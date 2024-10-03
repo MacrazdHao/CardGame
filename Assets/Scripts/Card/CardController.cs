@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardController : MonoBehaviour
 {
     public bool ReloadCard = false;
-    public CardTypeMap.CardKeyEnum CurrentCard = CardTypeMap.CardKeyEnum.Card_MonkeysYell; // 等Card作为预设prefab存在时，该参数将在创建prefab时由外部传入
+    public CardTypeMap.CardKeyEnum CurrentCard = CardTypeMap.CardKeyEnum.Card_Default; // 等Card作为预设prefab存在时，该参数将在创建prefab时由外部传入
     public Card CardInfo;
     public CardHeaderController cardHeaderController;
     public CardCoverController cardCoverController;
