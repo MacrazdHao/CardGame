@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class CardTypeMap
 {
-  public enum CardKeyEnum { Card_Default, Card_MonkeysYell, Card_SleepMonkey, Card_MoneyMonkey }
+  public enum CardKeyEnum { Card_Default, Card_MonkeysYell, Card_SleepMonkey, Card_MoneyMonkey, Card_FingerStick }
   public enum AttributeEnum { Magic, Physic, Attack, Defence, Default }
   public enum CardTypeEnum { CardType0, CardType1, CardType2, CardType3, CardType4, CardType5, Default }
+  public enum CardSubtypeEnum { CardSubtype0, CardSubtype1, CardSubtype2, CardSubtype3, CardSubtype4, CardSubtype5, Default }
   public enum CardRareEnum { B, A, S, SS, SSR, UR }
 
   public static string CardKeyToMapKey(CardKeyEnum val)
@@ -19,6 +20,7 @@ public class CardTypeMap
       case CardKeyEnum.Card_MonkeysYell: return "Card_MonkeysYell";
       case CardKeyEnum.Card_MoneyMonkey: return "Card_MoneyMonkey";
       case CardKeyEnum.Card_SleepMonkey: return "Card_SleepMonkey";
+      case CardKeyEnum.Card_FingerStick: return "Card_FingerStick";
       default: return "Card_Default";
     }
   }
@@ -30,6 +32,7 @@ public class CardTypeMap
       case "Card_MonkeysYell": return CardKeyEnum.Card_MonkeysYell;
       case "Card_MoneyMonkey": return CardKeyEnum.Card_MoneyMonkey;
       case "Card_SleepMonkey": return CardKeyEnum.Card_SleepMonkey;
+      case "Card_FingerStick": return CardKeyEnum.Card_FingerStick;
       default: return CardKeyEnum.Card_Default;
     }
   }
@@ -54,6 +57,19 @@ public class CardTypeMap
       case CardTypeEnum.CardType3: return "cardType3";
       case CardTypeEnum.CardType4: return "cardType4";
       case CardTypeEnum.CardType5: return "cardType5";
+      default: return "Default";
+    }
+  }
+  public static string CardSubtypeEnumToMapKey(CardSubtypeEnum val)
+  {
+    switch (val)
+    {
+      case CardSubtypeEnum.CardSubtype0: return "cardSubtype0";
+      case CardSubtypeEnum.CardSubtype1: return "cardSubtype1";
+      case CardSubtypeEnum.CardSubtype2: return "cardSubtype2";
+      case CardSubtypeEnum.CardSubtype3: return "cardSubtype3";
+      case CardSubtypeEnum.CardSubtype4: return "cardSubtype4";
+      case CardSubtypeEnum.CardSubtype5: return "cardSubtype5";
       default: return "Default";
     }
   }

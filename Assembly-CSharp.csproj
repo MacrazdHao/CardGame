@@ -83,6 +83,16 @@
     <Compile Include="Assets\Scripts\Card\CardCoverController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cainos\Pixel Art Icon Pack - RPG\Shader\SH UI Icon Outline Color.shader" />
+    <None Include="Assets\Tileset\Dungeon Tale\Assets\Materials\INFO.txt" />
+    <None Include="Assets\Modern GDR - Free icons pack\01_Demo\Font\Ibarra_OFL.txt" />
+    <None Include="Assets\Cainos\Pixel Art Icon Pack - RPG\Shader\SH Sprite Icon Outline Color.shader" />
+    <None Include="Assets\Pixel Monster Pack\notes.txt" />
+    <None Include="Assets\Tileset\Dungeon Tale\Dt by NullTale.txt" />
+    <None Include="Assets\Tileset\Dungeon Tale\Assets\Materials\Shaders\LutLight.hlsl" />
+    <None Include="Assets\Modern GDR - Free icons pack\01_Demo\Font\Jost_OFL.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\Unity\2022.3.42f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
       <Private>False</Private>

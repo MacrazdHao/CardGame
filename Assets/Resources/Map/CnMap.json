@@ -1,5 +1,7 @@
 {
   "cardType": "卡牌类型",
+  "cardSubtype": "卡牌副类型",
+  "cardParentType": "卡牌前置类型",
   "cardName": "卡牌名称",
   "cardPhysic": "卡牌消耗体力",
   "cardMagic": "卡牌消耗魔力",

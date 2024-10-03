@@ -2,6 +2,8 @@
   "Card_Default": {
     "cardMapKey": "Card_Default",
     "cardType": 0,
+    "cardSubtype": [],
+    "cardParentType": [],
     "cardName": "未知",
     "cardPhysic": 0,
     "cardMagic": 0,
@@ -22,6 +24,8 @@
   "Card_MonkeysYell": {
     "cardMapKey": "Card_MonkeysYell",
     "cardType": 2,
+    "cardSubtype": [],
+    "cardParentType": [],
     "cardName": "马喽的咆哮",
     "cardPhysic": 1,
     "cardMagic": 0,
@@ -46,6 +50,8 @@
   "Card_SleepMonkey": {
     "cardMapKey": "Card_SleepMonkey",
     "cardType": 2,
+    "cardSubtype": [],
+    "cardParentType": [],
     "cardName": "睡喽",
     "cardPhysic": 1,
     "cardMagic": 0,
@@ -67,9 +73,37 @@
       "ImageType": 3
     }
   },
+  "Card_FingerStick": {
+    "cardMapKey": "Card_FingerStick",
+    "cardType": 2,
+    "cardSubtype": [],
+    "cardParentType": [],
+    "cardName": "手指棍",
+    "cardPhysic": 1,
+    "cardMagic": 0,
+    "cardSlot": {
+      "cardType2": 1,
+      "cardType4": 1,
+      "cardType5": 1
+    },
+    "cardCover": "CardCover_FingerStick",
+    "cardDescription": "指哪打哪！",
+    "cardAttack": 1,
+    "cardDefence": 0,
+    "cardRare": 2,
+    "cardCoverRect": {
+      "posX": 0,
+      "posY": 0,
+      "width": 240,
+      "height": 180,
+      "ImageType": 3
+    }
+  },
   "Card_MoneyMonkey": {
     "cardMapKey": "Card_MoneyMonkey",
     "cardType": 2,
+    "cardSubtype": [],
+    "cardParentType": [],
     "cardName": "认钱马喽",
     "cardPhysic": 1,
     "cardMagic": 0,
