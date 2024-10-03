@@ -22,7 +22,7 @@ public class Card : ICloneable
   public string id;
   public CardTypeMap.CardTypeEnum cardType; // 主类型
   public CardTypeMap.CardSubtypeEnum[] cardSubtype; // 副类型
-  public CardTypeMap.CardTypeEnum[] cardParentType; // 前置父类要求类型
+  public CardTypeMap.CardTypeEnum[] cardParentType; // 前置要求父类类型，暂时定义判断为满足其一即可
   public string cardName;
   public int cardPhysic;
   public int cardMagic;
